@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MatchBuilder.Models;
+using MatchBuilder.Views;
 
 namespace MatchBuilder.Services
 {
     public class MockDataStore : IDataStore<Item>
     {
         List<Item> items;
+        private List<Player> _players;
 
         public MockDataStore()
         {
@@ -27,6 +29,21 @@ namespace MatchBuilder.Services
             {
                 items.Add(item);
             }
+
+            _players = new List<Player>();
+            var player = new List<Player>
+            {
+                new Player {Name = "Thomas"},
+                new Player {Name = "Henrik"}
+
+            };
+
+            foreach (var play in player)
+            {
+                _players.Add(play);
+                
+            }
+
         }
 
         public async Task<bool> AddItemAsync(Item item)

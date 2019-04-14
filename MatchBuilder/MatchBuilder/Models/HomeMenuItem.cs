@@ -6,7 +6,6 @@ namespace MatchBuilder.Models
 {
     public enum MenuItemType
     {
-        Browse,
         About,
         NewMatch,
         AddPlayers,

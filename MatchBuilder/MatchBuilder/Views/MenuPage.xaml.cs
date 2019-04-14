@@ -18,7 +18,6 @@ namespace MatchBuilder.Views
 
             menuItems = new List<HomeMenuItem>
             {
-                new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
                 new HomeMenuItem {Id = MenuItemType.NewMatch, Title = "New Match"},
                 new HomeMenuItem {Id = MenuItemType.AddPlayers, Title = "Add Players"},
                 new HomeMenuItem {Id = MenuItemType.About, Title="About" },

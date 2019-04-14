@@ -17,7 +17,7 @@ namespace MatchBuilder.Views
 
             MasterBehavior = MasterBehavior.Popover;
 
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            MenuPages.Add((int)MenuItemType.NewMatch, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -26,11 +26,17 @@ namespace MatchBuilder.Views
             {
                 switch (id)
                 {
-                    case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
-                        break;
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
+                        break;
+                    case (int)MenuItemType.AddPlayers:
+                        MenuPages.Add(id, new NavigationPage(new AddPlayersPage()));
+                        break;
+                    case (int)MenuItemType.NewMatch:
+                        MenuPages.Add(id, new NavigationPage(new NewMatchPage()));
+                        break;
+                    case (int)MenuItemType.Contribute:
+                        MenuPages.Add(id, new NavigationPage(new ContributePage()));
                         break;
                 }
             }
